@@ -166,7 +166,7 @@ class ModelImageVisualizer:
 
     def get_transformed_image(
         self, path: Path, render_factor: int = None, post_process: bool = True,
-        watermarked: bool = True,
+        watermarked: bool = False,
     ) -> Image:
         self._clean_mem()
         orig_image = self._open_pil_image(path)
@@ -189,7 +189,7 @@ class ModelImageVisualizer:
     ):
         if axes is None:
             _, axes = plt.subplots(figsize=figsize)
-        axes.imshow(np.asarray(image) / 255)
+        #axes.imshow(np.asarray(image) / 255)
         axes.axis('off')
         if render_factor is not None and display_render_factor:
             plt.text(
