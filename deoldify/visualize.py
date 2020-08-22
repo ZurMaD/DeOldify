@@ -105,12 +105,12 @@ class ModelImageVisualizer:
             path, render_factor, post_process=post_process,watermarked=watermarked
         )
         orig = self._open_pil_image(path)
-        if compare:
-            self._plot_comparison(
-                figsize, render_factor, display_render_factor, orig, result
-            )
-        else:
-            self._plot_solo(figsize, render_factor, display_render_factor, result)
+        #if compare:
+         #   self._plot_comparison(
+          #      figsize, render_factor, display_render_factor, orig, result
+          #  )
+        #else:
+        #    self._plot_solo(figsize, render_factor, display_render_factor, result)
 
         orig.close()
         result_path = self._save_result_image(path, result)
